@@ -1,0 +1,92 @@
+# Euler equations for rigid body rotations in 3D
+# y1,y2,y3 are coordinates of rotation vector
+#I1, I2, I3 are moments of inertia along 3 axes
+# 3 eqn of Euler:
+# 1. (dy1/dt)=((I2-I3)/I1)*y2*y3
+# 2. (dy2/dt)=((I3-I1)/I2)*y3*y1
+# 3. (dy3/dt)=((I1-I2)/I3)*y1*y2
+
+# library required
+#install.packages("scatterplot3d")
+library("deSolve")
+library("scatterplot3d")
+
+# defining the rigid body model
+model<-function(times,y,params){
+  I1<-params[1]
+  I2<-params[2]
+  I3<-params[3]
+  
+  dy1=((I2-I3)/I1)*y[2]*y[3]
+  dy2=((I3-I1)/I2)*y[3]*y[1]
+  dy3=((I1-I2)/I3)*y[1]*y[2]
+  
+  return(list(c(dy1,dy2,dy3)))
+}
+
+# initial value y1(0)=1, y2(0)=0, y3(0)=0.9
+
+initial<-c(y1=1, y2=0, y3=0.9)
+
+# parameters 1
+I1 <- 0.5
+I2 <- 2
+I3 <- 3
+params<-c(I1,I2,I3)
+
+times<-seq(from=0, to=20, by=0.01)
+
+x11()
+# ODE calculation using function from deSolve
+out<- ode(times=times,y=initial ,parms=params,func=model)
+par(mfrow = c(2, 2))
+plot(out)
+scatterplot3d(out[,-1])
+
+head(out)
+# trying different parameters
+I1 <- 0.3
+I2 <- 0.1
+I3 <- 2
+params<-c(I1,I2,I3)
+X11()
+out2<- ode(times=times,y=initial ,parms=params,func=model)
+
+par(mfrow = c(3, 2))
+#plot(out2)
+scatterplot3d(out[,-1])
+scatterplot3d(out2[,-1])
+I1 <- 0
+I2 <- 0
+I3 <- 0
+params<-c(I1,I2,I3)
+
+out3<- ode(times=times,y=initial ,parms=params,func=model)
+scatterplot3d(out3[,-1])
+
+I1 <- 0.3
+I2 <- 0.7
+I3 <- 0.5
+params<-c(I1,I2,I3)
+
+out4<- ode(times=times,y=initial ,parms=params,func=model)
+scatterplot3d(out4[,-1])
+
+I1 <- 2.3
+I2 <- 2
+I3 <- 2
+params<-c(I1,I2,I3)
+
+out5<- ode(times=times,y=initial ,parms=params,func=model)
+scatterplot3d(out5[,-1])
+
+I1 <- 0.3
+I2 <- 2
+I3 <- 2
+params<-c(I1,I2,I3)
+
+out5<- ode(times=times,y=initial ,parms=params,func=model)
+scatterplot3d(out5[,-1])
+
+
+head(out)
