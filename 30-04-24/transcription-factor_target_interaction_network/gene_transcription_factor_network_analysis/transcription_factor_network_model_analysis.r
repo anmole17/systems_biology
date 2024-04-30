@@ -83,6 +83,7 @@ colnames(df) = c("name","degree")
 ed = incident(g_TF_gene, V(g_TF_gene)$name=="GAGE8")                                           
 print (ed)
 
+# how to get edges reaching and edges going from a node
 
 
 
