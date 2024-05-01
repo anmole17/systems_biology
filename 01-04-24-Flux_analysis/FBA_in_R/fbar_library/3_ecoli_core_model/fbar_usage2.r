@@ -26,7 +26,7 @@ evaluation_function <- function(genome){
 
 data(ecoli_core)
 
-res = evalution_function(ecoli_core)
+res = evaluation_function(ecoli_core)
 
 
 
