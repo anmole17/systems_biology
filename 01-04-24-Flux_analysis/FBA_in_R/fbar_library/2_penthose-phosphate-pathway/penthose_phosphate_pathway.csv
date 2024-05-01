@@ -1,0 +1,8 @@
+"abbreviation","lowbnd","uppbnd","obj_coef","equation","officialName","geneAssociation","subsystem"
+"Reaction1", -1.000, 1.000, 1, "betaG6P + NADPplus ---> (6)PGL + NADPH", "R1", "", ""
+"Reaction2", -1.000, 1.000, 0, "(6)PGL + H2O ---> (6)PG", "R2", "", ""
+"Reaction3", -1.000, 1.000, 1, "(6)PG + NADPplus ---> R5P + NADPH", "R3", "", ""
+"Reaction4", -1.000, 1.000, 0, "R5P ---> X5P", "R4","", ""
+"Reaction5", -1.000, 1.000, 0, "alphaG6P <==> betaG6P", "R5","", ""
+"Reaction6", -1.000, 1.000, 0, "alphaG6P <==> betaF6P", "R6","", ""
+"Reaction7", -1.000, 1.000, 0, "betaGCP <==> betaF6P", "R7","", ""
