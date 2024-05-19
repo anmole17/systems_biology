@@ -15,7 +15,7 @@ library(ROI.plugin.ecos)
 ## "do_minimization" --> to uniformly minimize all non-objective fluxes after finding the objective. Default is FALSE
 
 
-penthose_phosphate_table=read.csv("./2_penthose-phosphate-pathway/penthose_phosphate_pathway.csv", header=TRUE)
+penthose_phosphate_table=read.csv("./penthose_phosphate_pathway.csv", header=TRUE)
 
 
 penthose_phosphate_table$lowbnd = as.numeric(penthose_phosphate_table$lowbnd)

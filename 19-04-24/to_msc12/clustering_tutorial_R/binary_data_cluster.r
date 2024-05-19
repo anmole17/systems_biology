@@ -18,6 +18,6 @@ mat.norm <- mat/ sqrt(2*rowSums(mat))
 ##kc = dist(mat.norm, "euclidean")
 ##plot(kc)
 c1 = kmeans(mat.norm, 2)
- plot(mat.norm, col=c1$cluster)
+plot(mat.norm, col=c1$cluster)
 
 

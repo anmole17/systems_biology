@@ -1,9 +1,7 @@
-##             Tutorial for hierarchical and K-means clustering
-
 
 ######################################################################
 
-##################  A-1.  K-means ckustering  #########################
+################## K-means ckustering  #########################
 
 ## read data file
 dat = read.table("clusterdata.txt", header=TRUE)

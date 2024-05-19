@@ -109,7 +109,7 @@ edge.color="lightsteelblue")
 
 ##--------------- degree measures----------------------------
 
-## Edge density = ratio between edges in the graph to all pssoble edges between nodes
+## Edge density = ratio between edges in the graph to all possible edges between nodes
 print(  edge_density(gr1_dir) )
 
 

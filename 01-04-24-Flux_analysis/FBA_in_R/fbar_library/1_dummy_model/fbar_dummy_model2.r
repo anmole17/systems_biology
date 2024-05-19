@@ -15,7 +15,7 @@ library(ROI.plugin.ecos)
 ## "do_minimization" --> to uniformly minimize all non-objective fluxes after finding the objective. Default is FALSE
 
 
-dummy_model2_table=read.csv("./1_dummy_model/dummy_model-2.csv", header=TRUE)
+dummy_model2_table=read.csv("./dummy_model-2.csv", header=TRUE)
 
 
 dummy_model2_table$lowbnd = as.numeric(dummy_model2_table$lowbnd)

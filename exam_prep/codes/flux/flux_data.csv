@@ -1,0 +1,6 @@
+"abbreviation","lowbnd","uppbnd","obj_coef","equation","officialName","geneAssociation","subsystem"
+"Reaction1", -1000, 1000, 0, "--> A", "R1", "", ""
+"Reaction2", -1000, 1000, 0, "A --> B", "R2", "", ""
+"Reaction3", -1000, 1000, 0, "A --> C", "R3", "", ""
+"Reaction4", -1000, 1000, 0, "B -->", "R4","", ""
+"Reaction5", -1000, 1000, 1, "C -->", "R5","", ""
