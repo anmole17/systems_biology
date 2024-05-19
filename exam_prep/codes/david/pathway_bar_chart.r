@@ -13,9 +13,12 @@ head(david_data)
 
 
 david_data<-david_data %>% 
-  filter(substr(Term,1,2)=="GO", FDR < 0.05) %>% 
+  filter(substr(Term,1,2)=="GO") %>% 
   mutate(GO_ID = do.call('rbind', strsplit(Term,'~', fixed=TRUE))[,1],
          Term = do.call('rbind', strsplit(Term,'~', fixed=TRUE))[,2]) %>% 
+  arrange(Benjamini)
+
+david_data<-head(david_data,6) %>% 
   arrange(Count)
   
 head(david_data)
@@ -43,7 +46,7 @@ compression = c("lzw")
 
 
 david_data$Term <- factor(david_data$Term, levels = david_data$Term)
-ggplot(tail(david_data,20), aes(Term, Count)) + 
+ggplot(head(david_data,6), aes(Term, Count)) + 
 ggtitle("Selected Pathways") +
 geom_bar(stat="identity", color="blue", fill="blue")+	
 coord_flip() +
